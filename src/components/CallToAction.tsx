@@ -2,13 +2,31 @@ import { useState } from "react"
 import { HighlightedText } from "./HighlightedText"
 import Icon from "@/components/ui/icon"
 
+const SEND_FORM_URL = "https://functions.poehali.dev/21ce14e7-a98f-49d3-b8f3-18e4a80761c2"
+
 export function CallToAction() {
   const [form, setForm] = useState({ name: "", phone: "", object: "", comment: "" })
   const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSent(true)
+    setLoading(true)
+    setError("")
+    try {
+      const res = await fetch(SEND_FORM_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error("Ошибка отправки")
+      setSent(true)
+    } catch {
+      setError("Не удалось отправить заявку. Позвоните нам напрямую.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -117,10 +135,12 @@ export function CallToAction() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-orange-400 hover:bg-orange-300 text-foreground py-4 text-sm tracking-widest uppercase font-medium transition-colors duration-300"
+                  disabled={loading}
+                  className="w-full bg-orange-400 hover:bg-orange-300 text-foreground py-4 text-sm tracking-widest uppercase font-medium transition-colors duration-300 disabled:opacity-60"
                 >
-                  Получить расчёт бесплатно
+                  {loading ? "Отправляем..." : "Получить расчёт бесплатно"}
                 </button>
+                {error && <p className="text-red-400 text-sm text-center">{error}</p>}
                 <p className="text-primary-foreground/30 text-xs text-center">
                   Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
                 </p>

@@ -24,15 +24,15 @@ const projects = [
     category: "Ангар",
     location: "Краснодарский край, Россия",
     year: "2023",
-    image: "https://cdn.poehali.dev/projects/23f29599-2008-47dd-a17d-c3ab2be82701/files/3e089552-c9a0-46a8-a37c-b6f4d2fe671e.jpg",
+    image: "https://cdn.poehali.dev/projects/23f29599-2008-47dd-a17d-c3ab2be82701/files/47fd298c-bd4b-4955-b24a-09873509cc88.jpg",
   },
   {
     id: 4,
-    title: "Торговый центр",
+    title: "Каркас торгового здания",
     category: "Торговое здание",
     location: "Новосибирск, Россия",
     year: "2023",
-    image: "https://cdn.poehali.dev/projects/23f29599-2008-47dd-a17d-c3ab2be82701/files/7630aa62-cda4-4dd7-91d2-b8a769685c8f.jpg",
+    image: "https://cdn.poehali.dev/projects/23f29599-2008-47dd-a17d-c3ab2be82701/files/14062352-5adf-44da-94d5-2e261c6cbb7a.jpg",
   },
 ]
 

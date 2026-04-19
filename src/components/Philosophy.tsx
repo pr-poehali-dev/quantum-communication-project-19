@@ -62,8 +62,8 @@ export function Philosophy() {
 
             <div className="relative hidden lg:block">
               <img
-                src="https://cdn.poehali.dev/projects/23f29599-2008-47dd-a17d-c3ab2be82701/files/7630aa62-cda4-4dd7-91d2-b8a769685c8f.jpg"
-                alt="Монтаж стального каркаса"
+                src="https://cdn.poehali.dev/projects/23f29599-2008-47dd-a17d-c3ab2be82701/files/7e532c56-ae73-46f8-93aa-e75b0b996e99.jpg"
+                alt="Каркас металлоконструкций"
                 className="opacity-90 relative z-10 w-auto rounded-lg"
               />
             </div>

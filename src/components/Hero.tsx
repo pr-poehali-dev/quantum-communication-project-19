@@ -120,9 +120,9 @@ export function Hero() {
     <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://cdn.poehali.dev/files/27655096-7287-4061-83f7-0fa33d88b2f4.jpg"
+          src="https://cdn.poehali.dev/projects/23f29599-2008-47dd-a17d-c3ab2be82701/files/1a6ba1dd-e213-4d0d-80ae-c9a27e913266.jpg"
           alt="Стальной каркас промышленного здания"
-          className="w-full h-full object-cover object-bottom"
+          className="w-full h-full object-cover object-center"
         />
       </div>
 
@@ -136,29 +136,25 @@ export function Hero() {
           transformStyle: "preserve-3d",
         }}
       >
-        <div className="mb-64 md:mb-56 lg:mb-72 flex flex-col items-center gap-8">
-          {/* Логотип */}
-          <img
-            src="https://cdn.poehali.dev/files/9e4bf458-52dc-4b9c-98df-48a97b66b566.png"
-            alt="ЗМК Стальной Каркас"
-            className="h-28 md:h-36 lg:h-44 w-auto object-contain drop-shadow-2xl"
-            style={{ filter: "brightness(0) invert(1)" }}
-          />
-
+        <div className="mb-64 md:mb-56 lg:mb-72 flex flex-col items-center gap-0">
           <div className="text-center">
-            <p className="text-xs md:text-sm tracking-[0.4em] uppercase text-white/60 mb-4">
+            <p className="text-xs md:text-sm tracking-[0.4em] uppercase text-white/70 mb-5 font-medium">
               Завод металлоконструкций
             </p>
             <h1
               ref={titleRef}
-              className="text-6xl font-bold text-balance text-center text-white tracking-tight leading-[0.95] lg:text-8xl drop-shadow-lg"
+              className="text-6xl font-bold text-balance text-center text-white tracking-tight leading-[0.95] lg:text-8xl"
+              style={{ textShadow: "0 2px 32px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.9)" }}
             >
               {"Стальной"}
               <br />
               <span className="text-red-400">{"Каркас"}</span>
             </h1>
-            <p className="mt-6 text-white/70 text-lg md:text-xl max-w-xl mx-auto leading-relaxed">
-              Проектируем, производим и монтируем металлоконструкции&nbsp;— от задачи до готового каркаса
+            <p
+              className="mt-7 text-white text-lg md:text-xl max-w-xl mx-auto leading-relaxed font-medium"
+              style={{ textShadow: "0 1px 12px rgba(0,0,0,0.9), 0 2px 24px rgba(0,0,0,0.8)" }}
+            >
+              Проектируем, производим и монтируем<br className="hidden md:block" /> металлоконструкции — от задачи до готового каркаса
             </p>
             <a
               href="#contact"

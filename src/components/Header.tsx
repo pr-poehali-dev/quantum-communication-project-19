@@ -32,9 +32,16 @@ export function Header() {
       )}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between md:px-[24]">
-        <a href="/" className="flex items-center gap-2 group" onClick={scrollToTop}>
-          <span className="text-white font-medium tracking-tight text-lg leading-tight">
-            ЗМК<br /><span className="text-orange-300 text-sm font-normal tracking-widest uppercase">Стальной Каркас</span>
+        <a href="/" className="flex items-center gap-3 group" onClick={scrollToTop}>
+          <img
+            src="https://cdn.poehali.dev/files/9e4bf458-52dc-4b9c-98df-48a97b66b566.png"
+            alt="ЗМК Стальной Каркас"
+            className="h-9 w-auto object-contain"
+            style={{ filter: "brightness(0) invert(1)" }}
+          />
+          <span className="text-white font-semibold tracking-tight text-base leading-tight hidden sm:block">
+            Стальной Каркас<br />
+            <span className="text-white/50 text-xs font-normal tracking-widest uppercase">Завод металлоконструкций</span>
           </span>
         </a>
 

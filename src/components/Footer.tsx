@@ -5,8 +5,16 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="md:col-span-2">
-            <a href="/" className="inline-block mb-6">
-              <span className="text-xl font-medium tracking-tight">ЗМК Стальной Каркас</span>
+            <a href="/" className="inline-flex items-center gap-3 mb-6">
+              <img
+                src="https://cdn.poehali.dev/files/9e4bf458-52dc-4b9c-98df-48a97b66b566.png"
+                alt="ЗМК Стальной Каркас"
+                className="h-10 w-auto object-contain"
+              />
+              <span className="text-base font-semibold tracking-tight leading-tight">
+                Стальной Каркас<br />
+                <span className="text-muted-foreground text-xs font-normal tracking-widest uppercase">Завод металлоконструкций</span>
+              </span>
             </a>
             <p className="text-muted-foreground leading-relaxed max-w-sm">
               Проектируем, производим и монтируем металлоконструкции для промышленных, складских и торговых объектов по всей России.

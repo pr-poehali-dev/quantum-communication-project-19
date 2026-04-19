@@ -120,9 +120,9 @@ export function Hero() {
     <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://cdn.poehali.dev/projects/23f29599-2008-47dd-a17d-c3ab2be82701/files/ea7fd191-c8bc-4939-b172-1d10ffcb4f15.jpg"
+          src="https://cdn.poehali.dev/files/27655096-7287-4061-83f7-0fa33d88b2f4.jpg"
           alt="Стальной каркас промышленного здания"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-bottom"
         />
       </div>
 
@@ -136,21 +136,41 @@ export function Hero() {
           transformStyle: "preserve-3d",
         }}
       >
-        <div className="mb-72 md:mb-60 lg:mb-80">
-          <p className="text-sm tracking-[0.3em] uppercase text-center text-secondary mb-0">{"ООО ЗМК Стальной Каркас"}</p>
+        <div className="mb-64 md:mb-56 lg:mb-72 flex flex-col items-center gap-8">
+          {/* Логотип */}
+          <img
+            src="https://cdn.poehali.dev/files/9e4bf458-52dc-4b9c-98df-48a97b66b566.png"
+            alt="ЗМК Стальной Каркас"
+            className="h-28 md:h-36 lg:h-44 w-auto object-contain drop-shadow-2xl"
+            style={{ filter: "brightness(0) invert(1)" }}
+          />
 
-          <h1
-            ref={titleRef}
-            className="text-7xl font-medium text-balance text-center text-white mb-0 tracking-tight leading-[0.9] lg:text-8xl"
-          >
-            {"Металлоконструкции"}
-            <br />
-            <span className="text-orange-200">{"под ключ"}</span>
-          </h1>
+          <div className="text-center">
+            <p className="text-xs md:text-sm tracking-[0.4em] uppercase text-white/60 mb-4">
+              Завод металлоконструкций
+            </p>
+            <h1
+              ref={titleRef}
+              className="text-6xl font-bold text-balance text-center text-white tracking-tight leading-[0.95] lg:text-8xl drop-shadow-lg"
+            >
+              {"Стальной"}
+              <br />
+              <span className="text-red-400">{"Каркас"}</span>
+            </h1>
+            <p className="mt-6 text-white/70 text-lg md:text-xl max-w-xl mx-auto leading-relaxed">
+              Проектируем, производим и монтируем металлоконструкции&nbsp;— от задачи до готового каркаса
+            </p>
+            <a
+              href="#contact"
+              className="mt-8 inline-flex items-center gap-3 bg-red-700 hover:bg-red-600 text-white px-8 py-4 text-sm tracking-widest uppercase font-medium transition-colors duration-300"
+            >
+              Получить расчёт бесплатно
+            </a>
+          </div>
         </div>
       </div>
 
-      <div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-t from-black/60 via-black/20 to-black/30" />
+      <div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
 
       {animationComplete && (
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce z-30">

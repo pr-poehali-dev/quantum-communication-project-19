@@ -1,30 +1,30 @@
 import { useEffect, useRef, useState } from "react"
-import { Home, Building, Armchair, Trees } from "lucide-react"
+import Icon from "@/components/ui/icon"
 import { HighlightedText } from "./HighlightedText"
 
 const expertiseAreas = [
   {
-    title: "Жилая архитектура",
-    description: "Создаем дома, которые сочетают красоту с комфортом, где каждое пространство служит и форме, и функции.",
-    icon: Home,
+    title: "Проектирование",
+    description: "Разрабатываем рабочую документацию, расчёты и чертежи под конкретный объект. Работаем с нестандартными пролётами и нагрузками.",
+    icon: "Ruler",
   },
   {
-    title: "Коммерческие объекты",
+    title: "Производство",
     description:
-      "Проектируем рабочие пространства, которые вдохновляют на продуктивность и отражают ценности передовых организаций.",
-    icon: Building,
+      "Собственный завод металлоконструкций. Контроль качества на всех этапах — от заготовки до сборки и антикоррозионной обработки.",
+    icon: "Factory",
   },
   {
-    title: "Дизайн интерьеров",
+    title: "Монтаж",
     description:
-      "Создаем интерьеры, которые гармонируют с архитектурной оболочкой, формируя целостный пространственный опыт.",
-    icon: Armchair,
+      "Собственные монтажные бригады с опытом на сложных объектах. Соблюдаем технологию и сроки — работаем по всей России.",
+    icon: "HardHat",
   },
   {
-    title: "Градостроительство",
+    title: "Типы объектов",
     description:
-      "Формируем сообщества через продуманную интеграцию общественных пространств, зданий и природных элементов.",
-    icon: Trees,
+      "Склады, ангары, производственные цеха, торговые здания, технические сооружения. Пролёты до 60 м без промежуточных опор.",
+    icon: "Building2",
   },
 ]
 
@@ -59,18 +59,17 @@ export function Expertise() {
         <div className="max-w-3xl mb-20">
           <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
           <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-            <HighlightedText>Экспертиза</HighlightedText>, отточенная
+            <HighlightedText>Полный цикл</HighlightedText> —
             <br />
-            практикой
+            один подрядчик
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Каждый проект опирается на десятилетия совокупного опыта, создавая архитектуру, которая одновременно инновационна и вневременна.
+            От технического задания до готового каркаса на площадке — всё в одних руках. Никаких стыков ответственности между проектировщиком, заводом и монтажниками.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
           {expertiseAreas.map((area, index) => {
-            const Icon = area.icon
             return (
               <div
                 key={area.title}
@@ -91,7 +90,7 @@ export function Expertise() {
                     transitionDelay: `${index * 150}ms`,
                   }}
                 >
-                  <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
+                  <Icon name={area.icon} size={40} className="mb-4 text-foreground" strokeWidth={1.25} />
                 </div>
                 <h3 className="text-xl font-medium mb-4">{area.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{area.description}</p>

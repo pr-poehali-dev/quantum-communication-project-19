@@ -33,13 +33,15 @@ export function Header() {
     >
       <nav className="container mx-auto px-6 flex items-center justify-between md:px-[24]">
         <a href="/" className="flex items-center gap-2 group" onClick={scrollToTop}>
-          <img src="/images/hously-logo.svg" alt="Пространство" width={120} height={32} className="w-auto h-6" />
+          <span className="text-white font-medium tracking-tight text-lg leading-tight">
+            ЗМК<br /><span className="text-orange-300 text-sm font-normal tracking-widest uppercase">Стальной Каркас</span>
+          </span>
         </a>
 
         <ul className="hidden md:flex items-center gap-10 text-sm tracking-wide">
           {[
             { label: "Главная", href: "#hero" },
-            { label: "Философия", href: "#about" },
+            { label: "О нас", href: "#about" },
             { label: "Проекты", href: "#projects" },
             { label: "Услуги", href: "#services" },
             { label: "Вопросы", href: "#faq" },
@@ -64,7 +66,7 @@ export function Header() {
               : "bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white",
           )}
         >
-          Связаться
+          Получить расчёт
         </a>
 
         <button
@@ -96,7 +98,7 @@ export function Header() {
           <ul className="flex flex-col gap-6 mb-8">
             {[
               { label: "Главная", href: "#hero" },
-              { label: "Философия", href: "#about" },
+              { label: "О нас", href: "#about" },
               { label: "Проекты", href: "#projects" },
               { label: "Услуги", href: "#services" },
               { label: "Вопросы", href: "#faq" },
@@ -118,7 +120,7 @@ export function Header() {
             className="inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5 bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white transition-all duration-300 mb-4"
             onClick={closeMobileMenu}
           >
-            Связаться
+            Получить расчёт
           </a>
         </div>
       </div>

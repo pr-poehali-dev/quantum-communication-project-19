@@ -3,23 +3,23 @@ import { HighlightedText } from "./HighlightedText"
 
 const philosophyItems = [
   {
-    title: "Минимализм со смыслом",
+    title: "Точность в каждом узле",
     description:
-      "Каждый элемент имеет свое назначение и пространство для дыхания. Мы убираем лишнее, чтобы раскрыть то, что действительно важно.",
+      "Проектируем с допуском до миллиметра. Каждое соединение, каждая балка рассчитаны так, чтобы служить десятилетиями без лишних затрат.",
   },
   {
-    title: "Архитектурный подход",
+    title: "От задачи до каркаса",
     description:
-      "Планировки, вдохновленные структурой, ритмом и материальностью. Здания, которые говорят через пропорции и свет.",
+      "Берём на себя полный цикл: проектирование, производство и монтаж. Один подрядчик — единая ответственность на всех этапах.",
   },
   {
-    title: "Естественная динамика",
+    title: "Скорость без компромиссов",
     description:
-      "Движение поддерживает восприятие, но никогда не отвлекает. Анимация, которая ощущается естественно, как свет, скользящий по комнате.",
+      "Собственное производство позволяет контролировать сроки. Металлоконструкции поставляем вовремя — строительный сезон не ждёт.",
   },
   {
-    title: "Вневременная эстетика",
-    description: "Элегантный, спокойный и долговечный визуальный язык. Дизайн, который превосходит тренды и стареет с достоинством.",
+    title: "Инженерная надёжность",
+    description: "Все конструкции проходят инженерный расчёт и соответствуют нормам СП и ГОСТ. Здания, которые стоят при любых нагрузках.",
   },
 ]
 
@@ -53,18 +53,18 @@ export function Philosophy() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left column - Title and image */}
           <div className="lg:sticky lg:top-32 lg:self-start">
-            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наша философия</p>
+            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наш подход</p>
             <h2 className="text-6xl md:text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-              Дизайн с
+              Сталь с
               <br />
-              <HighlightedText>намерением</HighlightedText>
+              <HighlightedText>характером</HighlightedText>
             </h2>
 
             <div className="relative hidden lg:block">
               <img
-                src="/images/exterior.png"
-                alt="Архитектурный эскиз рабочего пространства"
-                className="opacity-90 relative z-10 w-auto"
+                src="https://cdn.poehali.dev/projects/23f29599-2008-47dd-a17d-c3ab2be82701/files/7630aa62-cda4-4dd7-91d2-b8a769685c8f.jpg"
+                alt="Монтаж стального каркаса"
+                className="opacity-90 relative z-10 w-auto rounded-lg"
               />
             </div>
           </div>
@@ -72,7 +72,7 @@ export function Philosophy() {
           {/* Right column - Description and Philosophy items */}
           <div className="space-y-6 lg:pt-48">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-md mb-12">
-              Архитектура - это больше, чем конструкция. Это то, как мы воспринимаем мир. Мы создаем пространства, которые питают человеческий дух.
+              Металлоконструкции — это не просто сталь и болты. Это несущая основа бизнеса. Мы строим каркасы, которые держат производство, логистику и торговлю.
             </p>
 
             {philosophyItems.map((item, index) => (

@@ -37,12 +37,7 @@ export function Header() {
             src="https://cdn.poehali.dev/files/9e4bf458-52dc-4b9c-98df-48a97b66b566.png"
             alt="ЗМК Стальной Каркас"
             className="h-9 w-auto object-contain"
-            style={{ filter: "brightness(0) invert(1)" }}
           />
-          <span className="text-white font-semibold tracking-tight text-base leading-tight hidden sm:block">
-            Стальной Каркас<br />
-            <span className="text-white/50 text-xs font-normal tracking-widest uppercase">Завод металлоконструкций</span>
-          </span>
         </a>
 
         <ul className="hidden md:flex items-center gap-10 text-sm tracking-wide">

@@ -144,11 +144,11 @@ export function Hero() {
             <h1
               ref={titleRef}
               className="text-6xl font-bold text-balance text-center text-white tracking-tight leading-[0.95] lg:text-8xl"
-              style={{ textShadow: "0 2px 32px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.9)" }}
+              style={{ textShadow: "0 2px 32px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,1)" }}
             >
               {"Стальной"}
               <br />
-              <span className="text-red-400">{"Каркас"}</span>
+              <span style={{ color: "#c0001a", textShadow: "0 2px 24px rgba(0,0,0,1), 0 0 40px rgba(0,0,0,0.9)" }}>{"Каркас"}</span>
             </h1>
             <p
               className="mt-7 text-white text-lg md:text-xl max-w-xl mx-auto leading-relaxed font-medium"
@@ -167,6 +167,8 @@ export function Hero() {
       </div>
 
       <div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+      {/* Закрываем водяной знак iStock */}
+      <div className="absolute bottom-0 right-0 z-25 pointer-events-none w-48 h-16 bg-gradient-to-tl from-black/90 via-black/70 to-transparent" />
 
       {animationComplete && (
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce z-30">

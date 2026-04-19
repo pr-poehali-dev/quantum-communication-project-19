@@ -36,7 +36,7 @@ export function Header() {
           <img
             src="https://cdn.poehali.dev/files/9e4bf458-52dc-4b9c-98df-48a97b66b566.png"
             alt="ЗМК Стальной Каркас"
-            className="h-9 w-auto object-contain"
+            className="h-14 w-auto object-contain"
           />
         </a>
 
